@@ -59,10 +59,10 @@
                                 <i class="fa-li fa fa-home"></i>Francisco I. Madero NO. 72 Melchor Ocampo Estado de Mexico.
                             </li>
                             <li>
-                                <i class="fa-li fa fa-tablet"></i>55 58 78 42 37
+                                <i class="fa-li fa fa-tablet"></i> cel :55 25 03 76 61
                             </li>
                             <li>
-                                <i class="fa-li fa fa-envelope"></i>jorgenietom@formatowebgx.com
+                                <i class="fa-li fa fa-envelope"></i>jorgenietom@formatoweb.com
                             </li>
                         </ul>
 

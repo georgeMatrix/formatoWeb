@@ -4,10 +4,6 @@
         class="active"
     <?php } ?>><a href='/'>Inicio</a></li>
 
-    <li <?php if ($pagina==10) {?>
-        class="active"
-    <?php } ?>><a style="color: red" href='/tienda'>Catalogo</a></li>
-
     <li <?php if ($pagina==2) {?>
         class='active';
     <?php } ?>><a href='mantenimiento'>Mantenimiento Informatico</a></li>
@@ -20,17 +16,17 @@
         class='active';
     <?php } ?>><a href='paginasWeb'>Paginas Web</a></li>
 
-    <li <?php if ($pagina==5) {?>
-        class='active';
-    <?php } ?>><a href='diseno'>Diseño</a></li>
-
-    <li <?php if ($pagina==6) {?>
-        class='active';
-    <?php } ?>><a href='conoce'>Conoce al equipo</a></li>
-
     <li <?php if ($pagina==7) {?>
         class='active';
     <?php } ?>><a href='contacto'>Contáctanos</a></li>
+
+    <li <?php if ($pagina==8) {?>
+        class="active"
+    <?php } ?>><a href='#'>Punto de Venta</a></li>
+
+    <li <?php if ($pagina==9) {?>
+        class='active';
+    <?php } ?>><a href='#'>Nuestro Negocio</a></li>
 
 
 </ul>

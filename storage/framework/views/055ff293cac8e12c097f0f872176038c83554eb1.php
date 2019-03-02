@@ -118,7 +118,7 @@
                             <h2>Página </h2>
                             <p>Página con una galería muy vistosa. Si tienes una sección de fotografías que quieras
                                 mostrar al público esta es la que debes escoger</p>
-                            <button onClick="location.href='<?php echo e(route('inicioBus')); ?>'">Ir a la Pagina</button>
+                            <button>Ir a la Pagina</button>
                         </div>
                     </div>
                 </div>
@@ -149,7 +149,7 @@
                             <h2>Lorem Ipsum Dolor</h2>
                             <p>Lorem ipsum dolor sit amet consetetur elitr sed diam nonumy eirmod tempor invidunt ut
                                 labore et dolore.</p>
-                            <button onClick="location.href='portfolio-single.html'">More Details</button>
+                            <button>More Details</button>
                         </div>
                     </div>
                 </div>
