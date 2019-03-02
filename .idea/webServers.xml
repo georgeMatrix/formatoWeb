@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="f8fa5108-0943-4ae2-bcb4-243b5256adbf" name="formatoweb" url="http://www.formatoweb.net">
+        <fileTransfer host="www.formatoweb.net" port="21" rootFolder="/formatoweb">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
