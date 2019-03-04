@@ -7,15 +7,15 @@
                     <div class="card-icon">
                         <i class="material-icons">content_copy</i>
                     </div>
-                    <p class="card-category">Used Space</p>
+                    <p class="card-category">Pocas existencias</p>
                     <h3 class="card-title">49/50
-                        <small>GB</small>
+                        <small></small>
                     </h3>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
                         <i class="material-icons text-danger">warning</i>
-                        <a href="#pablo">Get More Space...</a>
+                        <a href="#pablo">Productos estan por agotarse</a>
                     </div>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                     <div class="card-icon">
                         <i class="material-icons">store</i>
                     </div>
-                    <p class="card-category">Revenue</p>
+                    <p class="card-category">Dinero en Caja</p>
                     <h3 class="card-title">$34,245</h3>
                 </div>
                 <div class="card-footer">
@@ -42,7 +42,7 @@
                     <div class="card-icon">
                         <i class="material-icons">info_outline</i>
                     </div>
-                    <p class="card-category">Fixed Issues</p>
+                    <p class="card-category">Verificar Merma</p>
                     <h3 class="card-title">75</h3>
                 </div>
                 <div class="card-footer">
@@ -76,9 +76,9 @@
                     <div class="ct-chart" id="dailySalesChart"></div>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Daily Sales</h4>
+                    <h4 class="card-title">Ventas de la ultima Semana</h4>
                     <p class="card-category">
-                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> increase in today sales.</p>
+                        <span class="text-success"><i class="fa fa-long-arrow-up"></i> 55% </span> Aumento en las ventas de hoy.</p>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
@@ -93,8 +93,8 @@
                     <div class="ct-chart" id="websiteViewsChart"></div>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Email Subscriptions</h4>
-                    <p class="card-category">Last Campaign Performance</p>
+                    <h4 class="card-title">Productos mejores vendidos</h4>
+                    <p class="card-category">Ultima Campaña</p>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
@@ -109,8 +109,8 @@
                     <div class="ct-chart" id="completedTasksChart"></div>
                 </div>
                 <div class="card-body">
-                    <h4 class="card-title">Completed Tasks</h4>
-                    <p class="card-category">Last Campaign Performance</p>
+                    <h4 class="card-title">Productos Mejores Vendido en Oferta</h4>
+                    <p class="card-category">Ultima Campaña</p>
                 </div>
                 <div class="card-footer">
                     <div class="stats">
@@ -126,23 +126,23 @@
                 <div class="card-header card-header-tabs card-header-primary">
                     <div class="nav-tabs-navigation">
                         <div class="nav-tabs-wrapper">
-                            <span class="nav-tabs-title">Tasks:</span>
+                            <span class="nav-tabs-title">Pendientes:</span>
                             <ul class="nav nav-tabs" data-tabs="tabs">
                                 <li class="nav-item">
                                     <a class="nav-link active" href="#profile" data-toggle="tab">
-                                        <i class="material-icons">bug_report</i> Bugs
+                                        <i class="material-icons">shopping_cart</i> Compras
                                         <div class="ripple-container"></div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#messages" data-toggle="tab">
-                                        <i class="material-icons">code</i> Website
+                                        <i class="material-icons">assignment</i> Pagos
                                         <div class="ripple-container"></div>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#settings" data-toggle="tab">
-                                        <i class="material-icons">cloud</i> Server
+                                        <i class="material-icons">assessment</i> Deudas
                                         <div class="ripple-container"></div>
                                     </a>
                                 </li>

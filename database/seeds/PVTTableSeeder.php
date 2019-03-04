@@ -1,10 +1,11 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Categoria;
-use App\Producto;
-use App\Provedor;
-use App\UnidadMedida;
+use App\modelos\Categoria;
+use App\modelos\Producto;
+use App\modelos\Provedor;
+use App\modelos\UnidadMedida;
+
 class PVTTableSeeder extends Seeder
 {
     /**
