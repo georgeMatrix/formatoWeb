@@ -11,6 +11,14 @@
 |
 */
 
+/*---------------Punto Venta-------------------*/
+Route::resource('pvt', 'pvt\InicioController');
+Route::resource('categoria', 'pvt\CategoriaController');
+Route::resource('provedor', 'pvt\ProvedorController');
+Route::resource('unidadMedida', 'pvt\UnidadMedidaController');
+Route::resource('producto', 'pvt\ProductoController');
+Route::resource('venta', 'pvt\VentaController');
+/*---------------Punto Venta-------------------*/
 Route::get('/', function () {
     return view('pages.welcome');
 });

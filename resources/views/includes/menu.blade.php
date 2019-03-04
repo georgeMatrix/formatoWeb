@@ -22,7 +22,7 @@
 
     <li <?php if ($pagina==8) {?>
         class="active"
-    <?php } ?>><a href='#'>Punto de Venta</a></li>
+    <?php } ?>><a href="{{route('pvt.index')}}">Punto de Venta</a></li>
 
     <li <?php if ($pagina==9) {?>
         class='active';
