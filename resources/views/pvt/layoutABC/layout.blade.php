@@ -230,7 +230,7 @@
 <!--  Notifications Plugin    -->
 <script src="/puntoVenta/assets/js/plugins/bootstrap-notify.js"></script>
 <!--<script src="/puntoVenta/tpv/venta/venta1.3.js"></script>-->
-<script src="/puntoVenta/assets/js/material-dashboard.js?v=2.1.1" type="text/javascript"></script>
+<script src="/puntoVenta/assets/js/material-dashboard.js" type="text/javascript"></script>
 
 <script>
     $(document).ready(function() {

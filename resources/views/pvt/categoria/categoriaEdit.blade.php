@@ -8,24 +8,29 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::model($categoria, ['route' => ['categoria.update', $categoria->id], 'method' => 'PUT']) !!}
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('nombre', 'Escribe el nombre de la categoria') !!}
-                                {!! Form::text('nombre', null, ['class'=>'form-control']) !!}
+                    <form action="/categoria/{{$categoria->id}}" method="post">
+                        {{method_field('PUT')}}
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nombre</label>
+                                    <input value="{{$categoria->nombre}}" type="text" name="nombre" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Descripcion</label>
+                                    <input value="{{$categoria->descripcion}}" type="text" name="descripcion" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                {!! Form::label('descripcion', 'Escribe una descripcion') !!}
-                                {!! Form::text('descripcion', null, ['class'=>'form-control']) !!}
+                                <button type="submit" class="btn btn-primary pull-right">Guardar</button>
                             </div>
                         </div>
-                    </div>
-                    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

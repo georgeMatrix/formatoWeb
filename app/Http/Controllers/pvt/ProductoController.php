@@ -86,10 +86,10 @@ class ProductoController extends Controller
     public function show($id)
     {
         $producto = Producto::find($id);
-        $provedor = Provedor::pluck('nombre', 'id');
-        $categoria = Categoria::pluck('nombre', 'id');
-        $unidadMedida = UnidadMedida::pluck('nombre', 'id');
-        return view('pvt/producto.productoEdit')->with('producto', $producto)->with('provedor', $provedor)->with('categoria', $categoria)->with('unidadMedida', $unidadMedida);
+        $provedor = Provedor::find($id);
+        $categorias = Categoria::all();
+        $unidadMedidas = UnidadMedida::all();
+        return view('pvt/producto.productoEdit')->with('producto', $producto)->with('provedor', $provedor)->with('categorias', $categorias)->with('unidadMedidas', $unidadMedidas);
     }
 
     /**
