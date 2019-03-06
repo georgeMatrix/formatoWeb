@@ -36,7 +36,13 @@
                                 <label for="">Provedor</label>
                                 <select name="provedor" id="" class="form-control" >
                                     @foreach($provedores as $provedor)
-                                        <option value="{{$provedor->id}}" @if($provedor->id == $producto->provedorF->id) selected @endIf>{{$provedor->nombre}}</option>
+                                        <option value="{{$provedor->id}}"
+                                            @if(is_null($producto->provedorF))
+                                                {{$provedor->nombre}}
+                                            @elseif($provedor->id == $producto->provedorF->id)
+                                                selected
+                                            @endIf
+                                        >{{$provedor->nombre}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -46,7 +52,13 @@
                                 <label for="">Categoria</label>
                                 <select name="categoria" id="" class="form-control" >
                                     @foreach($categorias as $categoria)
-                                        <option value="{{$categoria->id}}" @if($categoria->id == $producto->categoriaF->id) selected @endIf>{{$categoria->nombre}}</option>
+                                        <option value="{{$categoria->id}}"
+                                                @if(is_null($producto->categoriaF))
+                                                {{$categoria->nombre}}
+                                                @elseif($categoria->id == $producto->categoriaF->id)
+                                                selected
+                                                @endIf
+                                        >{{$categoria->nombre}}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -56,7 +68,13 @@
                                 <label for="">Unidad de Medida</label>
                                 <select name="unidad_Medida" id="" class="form-control" >
                                     @foreach($unidadMedidas as $unidadMedida)
-                                        <option value="{{$unidadMedida->id}}" @if($unidadMedida->id == $producto->unidad_MedidaF->id) selected @endIf>{{$unidadMedida->nombre}}</option>
+                                        <option value="{{$unidadMedida->id}}"
+                                                @if(is_null($producto->unidad_MedidaF))
+                                                {{$unidadMedida->nombre}}
+                                                @elseif($unidadMedida->id == $producto->unidad_MedidaF->id)
+                                                selected
+                                                @endIf
+                                        >{{$unidadMedida->nombre}}</option>
                                     @endforeach
                                 </select>
                             </div>
