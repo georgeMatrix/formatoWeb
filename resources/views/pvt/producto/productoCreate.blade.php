@@ -8,162 +8,181 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::open(['route' => 'producto.store', 'method' => 'post']) !!}
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('clave', 'Escribe la clave') !!}
-                                {!! Form::text('clave', null, ['class'=>'form-control']) !!}
+                    <form action="{{route('producto.store')}}" method="post">
+
+                        {{csrf_field()}}
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Clave</label>
+                                    <input type="text" name="clave" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Sku</label>
+                                    <input type="text" name="sku" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">skuVnpk</label>
+                                    <input type="text" name="skuVnpk" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Provedor</label>
+                                    <select name="provedor" id="" class="form-control" >
+                                        <option value="" selected>Selecciona un Proveedor</option>
+                                        @foreach($provedores as $provedor)
+                                            <option value="{{$provedor->id}}">{{$provedor->nombre}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Categoria</label>
+                                    <select name="categoria" id="" class="form-control" >
+                                        <option value="" selected>Selecciona una Categoria</option>
+                                        @foreach($categorias as $categoria)
+                                            <option value="{{$categoria->id}}">{{$categoria->nombre}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Unidad de Medida</label>
+                                    <select name="unidad_Medida" id="" class="form-control">
+                                        <option value="" selected>Selecciona una unidad de medida</option>
+                                        @foreach($unidadMedidas as $unidadMedida)
+                                            <option value="{{$unidadMedida->id}}">{{$unidadMedida->nombre}}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Descripcion</label>
+                                    <input type="text" name="descripcion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Descripcion extendida</label>
+                                    <input type="text" name="descripcionE" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Costo</label>
+                                    <input type="text" name="costo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Iva Costo</label>
+                                    <input type="text" name="iva_costo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Ieps Costo</label>
+                                    <input type="text" name="ieps_costo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Total Costo</label>
+                                    <input type="text" name="total_costo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Precio Mayoreo</label>
+                                    <input type="text" name="precio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Iva Precio Mayoreo</label>
+                                    <input type="text" name="iva_Precio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Ieps Precio Mayoreo</label>
+                                    <input type="text" name="ieps_Precio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Total Precio Mayoreo</label>
+                                    <input type="text" name="total_Precio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Precio Medio Mayoreo</label>
+                                    <input type="text" name="precio_Medio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Iva Precio Medio Mayoreo</label>
+                                    <input type="text" name="iva_Precio_Medio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Ieps Precio Medio Mayoreo</label>
+                                    <input type="text" name="ieps_Precio_Medio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Total Precio Medio Mayoreo</label>
+                                    <input type="text" name="total_Precio_Medio_Mayoreo" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Precio Retail</label>
+                                    <input type="text" name="precio_Retail" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Iva Precio Retail</label>
+                                    <input type="text" name="iva_Precio_Retail" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Ieps Precio Retail</label>
+                                    <input type="text" name="ieps_Precio_Retail" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Total Precio Retail</label>
+                                    <input type="text" name="total_Precio_Retail" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Existencia</label>
+                                    <input type="text" name="existencia" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <button type="submit" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('sku', 'Escribe el sku') !!}
-                                {!! Form::text('sku', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('skuVnpk', 'Escribe el skuVnpk') !!}
-                                {!! Form::text('skuVnpk', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('provedor', 'Selecciona un proveedor') !!}
-                                {!! Form::select('provedor', $provedor, null, ['class' => 'form-control', 'placeholder' => 'selecciona un provedor']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('categoria', 'Selecciona una Categoria') !!}
-                                {!! Form::select('categoria', $categoria, null, ['class' => 'form-control', 'placeholder' => 'selecciona un categoria']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('descripcion', 'Escribe el skuVnpk') !!}
-                                {!! Form::text('descripcion', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('unidad_Medida', 'Selecciona una unidad de medida') !!}
-                                {!! Form::select('unidad_Medida', $unidadMedida, null, ['class' => 'form-control', 'placeholder' => 'selecciona una unidad de medida']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('descripcionE', 'Escribe la descripcion extendida') !!}
-                                {!! Form::text('descripcionE', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('costo', 'Escribe el costo') !!}
-                                {!! Form::text('costo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('iva_costo', 'Escribe el iva costo') !!}
-                                {!! Form::text('iva_costo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('ieps_costo', 'Escribe el ieps costo') !!}
-                                {!! Form::text('ieps_costo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('total_costo', 'Escribe el total costo') !!}
-                                {!! Form::text('total_costo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('precio_Mayoreo', 'Escribe el precio mayoreo') !!}
-                                {!! Form::text('precio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('iva_Precio_Mayoreo', 'Escribe el iva precio mayoreo') !!}
-                                {!! Form::text('iva_Precio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('ieps_Precio_Mayoreo', 'Escribe el ieps precio mayoreo') !!}
-                                {!! Form::text('ieps_Precio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('total_Precio_Mayoreo', 'Escribe el total precio mayoreo') !!}
-                                {!! Form::text('total_Precio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('precio_Medio_Mayoreo', 'Escribe el precio medio mayoreo') !!}
-                                {!! Form::text('precio_Medio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('iva_Precio_Medio_Mayoreo', 'Escribe el precio iva precio medio mayoreo') !!}
-                                {!! Form::text('iva_Precio_Medio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('ieps_Precio_Medio_Mayoreo', 'Escribe el precio ieps precio medio mayoreo') !!}
-                                {!! Form::text('ieps_Precio_Medio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('total_Precio_Medio_Mayoreo', 'Escribe el total precio medio mayoreo') !!}
-                                {!! Form::text('total_Precio_Medio_Mayoreo', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('precio_Retail', 'Escribe el precio retail') !!}
-                                {!! Form::text('precio_Retail', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('iva_Precio_Retail', 'Escribe el iva precio retail') !!}
-                                {!! Form::text('iva_Precio_Retail', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('ieps_Precio_Retail', 'Escribe el ieps precio retail') !!}
-                                {!! Form::text('ieps_Precio_Retail', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('total_Precio_Retail', 'Escribe el total precio retail') !!}
-                                {!! Form::text('total_Precio_Retail', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('existencia', 'Escribe la existencia') !!}
-                                {!! Form::text('existencia', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                    </div>
-                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

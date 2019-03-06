@@ -17,9 +17,6 @@
                             <b>Descripcion</b>
                         </th>
                         <th>
-                            <b>Decimal</b>
-                        </th>
-                        <th>
                             <b>Editar</b>
                         </th>
 
@@ -32,9 +29,6 @@
                                 </td>
                                 <td>
                                     {{$unidadM->descripcion}}
-                                </td>
-                                <td>
-                                    {{$unidadM->Decimal}}
                                 </td>
                                 <td>
                                     <a href="{{route('unidadMedida.show', $unidadM->id)}}" class="btn btn-primary">Editar</a>

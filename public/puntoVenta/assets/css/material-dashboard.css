@@ -16,7 +16,7 @@
 /*     brand Colors              */
 
 .card {
-  font-size: .875rem;
+  /*font-size: .875rem;*/
 }
 
 *,
@@ -12549,7 +12549,7 @@ fieldset[disabled][disabled] .has-rose .form-control,
 
 .bmd-form-group [class^='bmd-label'],
 .bmd-form-group [class*=' bmd-label'] {
-  position: absolute;
+  /*position: absolute;*/
   pointer-events: none;
   transition: 0.3s ease all;
 }

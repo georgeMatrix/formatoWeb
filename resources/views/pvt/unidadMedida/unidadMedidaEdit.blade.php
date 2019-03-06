@@ -8,24 +8,29 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::model($unidadMedida, ['route' => ['unidadMedida.update', $unidadMedida->id], 'method' => 'PUT']) !!}
+                    <form action="/unidadMedida/{{$unidadMedida->id}}" method="post">
+                        {{method_field('PUT')}}
+                        {{csrf_field()}}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('nombre', 'Escribe el nombre de la unidad de medida') !!}
-                                {!! Form::text('nombre', null, ['class'=>'form-control']) !!}
+                                <label for="">Nombre</label>
+                                <input name="nombre" value="{{$unidadMedida->nombre}}" type="text" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('descripcion', 'Escribe su descripcion') !!}
-                                {!! Form::text('descripcion', null, ['class'=>'form-control']) !!}
+                                <label for="">Descripcion</label>
+                                <input name="descripcion" value="{{$unidadMedida->descripcion}}" type="text" class="form-control">
                             </div>
                         </div>
                     </div>
-                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary pull-right">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

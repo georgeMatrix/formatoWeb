@@ -32,10 +32,10 @@ class ProductoController extends Controller
      */
     public function create()
     {
-        $provedor = Provedor::pluck('nombre', 'id');
-        $categoria = Categoria::pluck('nombre', 'id');
-        $unidadMedida = UnidadMedida::pluck('nombre', 'id');
-        return view('pvt/producto/productoCreate')->with('provedor', $provedor)->with('categoria', $categoria)->with('unidadMedida', $unidadMedida);
+        $provedores = Provedor::all();
+        $categorias = Categoria::all();
+        $unidadMedidas = UnidadMedida::all();
+        return view('pvt/producto/productoCreate')->with('provedores', $provedores)->with('categorias', $categorias)->with('unidadMedidas', $unidadMedidas);
     }
 
     /**
@@ -86,10 +86,10 @@ class ProductoController extends Controller
     public function show($id)
     {
         $producto = Producto::find($id);
-        $provedor = Provedor::find($id);
+        $provedores = Provedor::all();
         $categorias = Categoria::all();
         $unidadMedidas = UnidadMedida::all();
-        return view('pvt/producto.productoEdit')->with('producto', $producto)->with('provedor', $provedor)->with('categorias', $categorias)->with('unidadMedidas', $unidadMedidas);
+        return view('pvt/producto.productoEdit')->with('producto', $producto)->with('provedores', $provedores)->with('categorias', $categorias)->with('unidadMedidas', $unidadMedidas);
     }
 
     /**

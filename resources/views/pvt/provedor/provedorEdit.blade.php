@@ -8,48 +8,53 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::model($provedor, ['route' => ['provedor.update', $provedor->id], 'method' => 'PUT']) !!}
+                    <form action="/provedor/{{$provedor->id}}" method="post">
+                        {{method_field('PUT')}}
+                        {{csrf_field()}}
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('nombre', 'Escribe el nombre del provedor') !!}
-                                {!! Form::text('nombre', null, ['class'=>'form-control']) !!}
+                                <label for="">Nombre</label>
+                                <input type="text" name="nombre" value="{{$provedor->nombre}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('razon_social', 'Escribe una razon social') !!}
-                                {!! Form::text('razon_social', null, ['class'=>'form-control']) !!}
+                                <label for="">Razon Social</label>
+                                <input type="text" name="razon_social" value="{{$provedor->razon_social}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('rfc', 'Escribe tu rfc') !!}
-                                {!! Form::text('rfc', null, ['class'=>'form-control']) !!}
+                                <label for="">RFC</label>
+                                <input type="text" name="rfc" value="{{$provedor->rfc}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('direccion', 'Escribe tu direccion') !!}
-                                {!! Form::text('direccion', null, ['class'=>'form-control']) !!}
+                                <label for="">Direccion</label>
+                                <input type="text" name="direccion" value="{{$provedor->direccion}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('telefono', 'Escribe tu telefono') !!}
-                                {!! Form::text('telefono', null, ['class'=>'form-control']) !!}
+                                <label for="">Telefono</label>
+                                <input type="text" name="telefono" value="{{$provedor->telefono}}" class="form-control">
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                {!! Form::label('contacto', 'Escribe tu contacto') !!}
-                                {!! Form::text('contacto', null, ['class'=>'form-control']) !!}
+                                <label for="">Contacto</label>
+                                <input type="text" name="contacto" value="{{$provedor->contacto}}" class="form-control">
                             </div>
                         </div>
                     </div>
-                    {!! Form::submit('Actualizar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary pull-right">Guardar</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

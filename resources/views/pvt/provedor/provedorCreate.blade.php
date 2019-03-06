@@ -8,48 +8,53 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::open(['route' => 'provedor.store', 'method' => 'post']) !!}
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('nombre', 'Escribe su nombre del provedor') !!}
-                                {!! Form::text('nombre', null, ['class'=>'form-control']) !!}
+
+                    <form action="{{route('provedor.store')}}" method="post">
+                        {{csrf_field()}}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nombre</label>
+                                    <input type="text" name="nombre" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Razon Social</label>
+                                    <input type="text" name="razon_social" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">RFC</label>
+                                    <input type="text" name="rfc" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Direccion</label>
+                                    <input type="text" name="direccion" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Telefono</label>
+                                    <input type="text" name="telefono" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Contacto</label>
+                                    <input type="text" name="contacto" class="form-control">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                {!! Form::label('razon_social', 'Escribe su razon social') !!}
-                                {!! Form::text('razon_social', null, ['class'=>'form-control']) !!}
+                                <button type="submit" class="btn btn-primary pull-right">Guardar</button>
                             </div>
                         </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('rfc', 'Escribe su RFC') !!}
-                                {!! Form::text('rfc', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('direccion', 'Escribe su direccion') !!}
-                                {!! Form::text('direccion', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('telefono', 'Escribe su telefono') !!}
-                                {!! Form::text('telefono', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('contacto', 'Escribe su contacto') !!}
-                                {!! Form::text('contacto', null, ['class'=>'form-control']) !!}
-                            </div>
-                        </div>
-                    </div>
-                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

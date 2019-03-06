@@ -8,24 +8,29 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
-                    {!! Form::open(['route' => 'unidadMedida.store', 'method' => 'post']) !!}
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                {!! Form::label('nombre', 'Escribe el nombre de la unidad de medida') !!}
-                                {!! Form::text('nombre', null, ['class'=>'form-control']) !!}
+                    <form action="{{route('unidadMedida.store')}}" method="post">
+                        {{csrf_field()}}
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="">Descripcion</label>
+                                    <input type="text" class="form-control" name="descripcion">
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="form-group">
-                                {!! Form::label('descripcion', 'Escribe su descripcion') !!}
-                                {!! Form::text('descripcion', null, ['class'=>'form-control']) !!}
+                                <button type="submit" class="btn btn-primary pull-right">Guardar</button>
                             </div>
                         </div>
-                    </div>
-                    {!! Form::submit('Guardar', ['class' => 'btn btn-primary pull-right']) !!}
-                    <div class="clearfix"></div>
-                    {!! Form::close() !!}
+                    </form>
                 </div>
             </div>
         </div>

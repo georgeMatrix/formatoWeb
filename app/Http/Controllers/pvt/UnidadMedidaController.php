@@ -79,7 +79,6 @@ class UnidadMedidaController extends Controller
         $unidadMedida = UnidadMedida::find($id);
         $unidadMedida->nombre = $request->nombre;
         $unidadMedida->descripcion = $request->descripcion;
-        $unidadMedida->activo_inactivo = 1;
         $unidadMedida->save();
         return redirect()->route('unidadMedida.index');
     }
