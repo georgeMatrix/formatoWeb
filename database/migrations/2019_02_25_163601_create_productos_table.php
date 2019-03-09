@@ -18,8 +18,8 @@ class CreateProductosTable extends Migration
             $table->string('clave');
             $table->string('sku');
             $table->string('skuVnpk');
-            $table->unsignedInteger('provedor');
-            $table->unsignedInteger('categoria');
+            $table->integer('provedor')->unsigned()->nullable();;
+            $table->integer('categoria')->unsigned()->nullable();;
             $table->string('descripcion');
             $table->string('descripcionE');
             $table->double('costo');
@@ -39,9 +39,11 @@ class CreateProductosTable extends Migration
             $table->double('ieps_Precio_Retail');
             $table->double('total_Precio_Retail');
             $table->double('existencia');
-            $table->unsignedInteger('unidad_Medida');
-            $table->unsignedInteger('activo_inactivo');
+            $table->integer('unidad_Medida')->unsigned()->nullable();;
             $table->timestamps();
+            $table->foreign('provedor')->references('id')->on('provedors')->onDelete('set null');
+            $table->foreign('unidad_Medida')->references('id')->on('unidad_medidas')->onDelete('set null');
+            $table->foreign('categoria')->references('id')->on('categorias')->onDelete('set null');
         });
     }
 

@@ -44,7 +44,6 @@ class ProvedorController extends Controller
         $provedor->direccion = $request->direccion;
         $provedor->telefono = $request->telefono;
         $provedor->contacto = $request->contacto;
-        $provedor->activo_inactivo = 1;
         $provedor->save();
         return redirect()->route('provedor.index');
     }

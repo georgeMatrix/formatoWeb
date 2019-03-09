@@ -21,7 +21,6 @@ class CreateProvedorsTable extends Migration
             $table->string('direccion');
             $table->string('telefono');
             $table->string('contacto');
-            $table->unsignedInteger('activo_inactivo');
             $table->timestamps();
         });
     }

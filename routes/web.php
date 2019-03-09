@@ -19,6 +19,22 @@ Route::resource('unidadMedida', 'pvt\UnidadMedidaController');
 Route::resource('producto', 'pvt\ProductoController');
 Route::resource('venta', 'pvt\VentaController');
 /*---------------Punto Venta-------------------*/
+/*--------------NEGOCIOS----------------*/
+Route::resource('negocios', 'NegociosController');
+Route::resource('abarrote', 'AbarroteController');
+Route::resource('refaccionaria', 'RefaccionariaController');
+Route::resource('panaderia', 'PanaderiaController');
+Route::resource('detalle', 'DetalleController');
+Route::resource('farmacia', 'FarmaciaController');
+Route::resource('hospital_index', 'hospital\HospitalIndexController');
+Route::resource('hospital', 'HospitalController');
+Route::resource('salonDeFiestas', 'SalonFiestasController');
+Route::resource('veterinaria', 'VeterinariaController');
+Route::resource('bares', 'BaresController');
+Route::resource('pizza', 'PizzaController');
+Route::resource('banquete', 'BanquetesController');
+
+
 Route::get('/', function () {
     return view('pages.welcome');
 });

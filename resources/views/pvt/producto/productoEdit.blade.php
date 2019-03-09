@@ -35,6 +35,9 @@
                             <div class="form-group">
                                 <label for="">Provedor</label>
                                 <select name="provedor" id="" class="form-control" >
+                                    @if(is_null($producto->provedorF))
+                                        <option value="">Selecciona una opcion</option>
+                                    @endIf
                                     @foreach($provedores as $provedor)
                                         <option value="{{$provedor->id}}"
                                             @if(is_null($producto->provedorF))
@@ -50,7 +53,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Categoria</label>
-                                <select name="categoria" id="" class="form-control" >
+                                <select name="categoria" id="" class="form-control">
+                                    <option value="">Selecciona un valor</option>
                                     @foreach($categorias as $categoria)
                                         <option value="{{$categoria->id}}"
                                                 @if(is_null($producto->categoriaF))
@@ -66,7 +70,7 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Unidad de Medida</label>
-                                <select name="unidad_Medida" id="" class="form-control" >
+                                <select name="unidad_Medida" id="" class="form-control">
                                     @foreach($unidadMedidas as $unidadMedida)
                                         <option value="{{$unidadMedida->id}}"
                                                 @if(is_null($producto->unidad_MedidaF))

@@ -30,7 +30,6 @@ $factory->define(App\modelos\Provedor::class, function (Faker $faker) {
         'direccion' => $faker->address,
         'telefono' => $faker->phoneNumber,
         'contacto' => $faker->name,
-        'activo_inactivo' => 1,
     ];
 });
 
@@ -38,7 +37,6 @@ $factory->define(App\modelos\Categoria::class, function (Faker $faker) {
     return [
         'nombre' => $faker->name,
         'descripcion' => $faker->name,
-        'activo_inactivo' => 1,
     ];
 });
 
@@ -47,7 +45,6 @@ $factory->define(App\modelos\UnidadMedida::class, function (Faker $faker) {
     return [
         'nombre' => $faker->name,
         'descripcion' => $faker->name,
-        'activo_inactivo' => 1,
     ];
 });
 
@@ -78,6 +75,5 @@ $factory->define(App\modelos\Producto::class, function (Faker $faker) {
         'total_Precio_Retail' => $faker -> numberBetween(10,50),
         'existencia' => $faker -> numberBetween(10,50),
         'unidad_Medida' => $faker -> biasedNumberBetween(1,5),
-        'activo_inactivo' => 1,
     ];
 });

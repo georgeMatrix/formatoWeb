@@ -16,10 +16,10 @@
                             <b>Descripcion</b>
                         </th>
                         <th>
-                            <b>Decimal</b>
+                            <b>Editar</b>
                         </th>
                         <th>
-                            <b>Editar</b>
+                            <b>Eliminar</b>
                         </th>
 
                         </thead>
@@ -32,10 +32,6 @@
                                 </td>
                                 <td>
                                     <?php echo e($unidadM->descripcion); ?>
-
-                                </td>
-                                <td>
-                                    <?php echo e($unidadM->Decimal); ?>
 
                                 </td>
                                 <td>

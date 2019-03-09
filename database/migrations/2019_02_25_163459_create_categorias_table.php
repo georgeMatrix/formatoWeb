@@ -17,7 +17,6 @@ class CreateCategoriasTable extends Migration
             $table->increments('id');
             $table->string('nombre');
             $table->string('descripcion');
-            $table->unsignedInteger('activo_inactivo');
             $table->timestamps();
         });
     }

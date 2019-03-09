@@ -40,7 +40,6 @@ class CategoriaController extends Controller
         $categoria = new Categoria();
         $categoria->nombre = $request->nombre;
         $categoria->descripcion = $request->descripcion;
-        $categoria->activo_inactivo = 1;
         $categoria->save();
         return redirect()->route('categoria.index');
     }

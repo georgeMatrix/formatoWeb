@@ -16,8 +16,8 @@ class PVTTableSeeder extends Seeder
     public function run()
     {
         factory(Categoria::class, 5)->create();
-        factory(Producto::class, 5)->create();
         factory(Provedor::class, 5)->create();
         factory(UnidadMedida::class, 5)->create();
+        factory(Producto::class, 5)->create();
     }
 }

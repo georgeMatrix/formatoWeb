@@ -19,6 +19,9 @@
                         <th>
                             <b>Editar</b>
                         </th>
+                        <th>
+                            <b>Eliminar</b>
+                        </th>
 
                         </thead>
                         <tbody>
