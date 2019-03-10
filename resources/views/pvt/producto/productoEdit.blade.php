@@ -54,7 +54,9 @@
                             <div class="form-group">
                                 <label for="">Categoria</label>
                                 <select name="categoria" id="" class="form-control">
-                                    <option value="">Selecciona un valor</option>
+                                    @if(is_null($producto->categoriaF))
+                                        <option value="">Selecciona una opcion</option>
+                                    @endIf
                                     @foreach($categorias as $categoria)
                                         <option value="{{$categoria->id}}"
                                                 @if(is_null($producto->categoriaF))
@@ -71,6 +73,9 @@
                             <div class="form-group">
                                 <label for="">Unidad de Medida</label>
                                 <select name="unidad_Medida" id="" class="form-control">
+                                    @if(is_null($producto->unidad_MedidaF))
+                                        <option value="">Selecciona una opcion</option>
+                                    @endIf
                                     @foreach($unidadMedidas as $unidadMedida)
                                         <option value="{{$unidadMedida->id}}"
                                                 @if(is_null($producto->unidad_MedidaF))
@@ -205,22 +210,6 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <div class="card card-profile">
-                <div class="card-avatar">
-                    <a href="#pablo">
-                        <img class="img" src="../assets/img/faces/marc.jpg" />
-                    </a>
-                </div>
-                <div class="card-body">
-                    <h6 class="card-category text-gray">CEO / Co-Founder</h6>
-                    <h4 class="card-title">Alec Thompson</h4>
-                    <p class="card-description">
-                        Don't be scared of the truth because we need to restart the human foundation in truth And I love you like Kanye loves Kanye I love Rick Owens’ bed design but the back is...
-                    </p>
-                    <a href="#pablo" class="btn btn-primary btn-round">Follow</a>
-                </div>
-            </div>
-        </div>
+        @include('pvt.layoutABC.tarjetaProgramador')
     </div>
 @endsection
