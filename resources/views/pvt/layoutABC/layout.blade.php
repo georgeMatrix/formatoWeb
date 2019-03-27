@@ -21,7 +21,7 @@
 
 <body class="">
 <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../assets/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="purple" data-background-color="white" data-image="../puntoVenta/assets/img/sidebar-1.jpg">
         <!--
           Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -229,9 +229,9 @@
 <script src="/puntoVenta/assets/js/plugins/chartist.min.js"></script>
 <!--  Notifications Plugin    -->
 <script src="/puntoVenta/assets/js/plugins/bootstrap-notify.js"></script>
-<!--<script src="/puntoVenta/tpv/venta/venta1.3.js"></script>-->
-<script src="/puntoVenta/assets/js/material-dashboard.js" type="text/javascript"></script>
 
+<script src="/puntoVenta/assets/js/material-dashboard.js" type="text/javascript"></script>
+<script src="/puntoVenta/tpv/venta/venta1.4.js"></script>
 <script>
     $(document).ready(function() {
         // Javascript method's body can be found in assets/js/demos.js

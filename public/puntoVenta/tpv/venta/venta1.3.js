@@ -424,6 +424,7 @@ function agregar() {
         '<input style="height: 50px; width: 250px; font-size: 30px; font-weight: bold" type="text" class="form-control" name="tipoVenta" id="tipoVenta' + CONTADOR + '" disabled></td> <td>' +
         '<input style="height: 50px; width: 100px; font-size: 30px; font-weight: bold" type="text" class="form-control" name="precio" id="precio' + CONTADOR + '" disabled></td><td>' +
         '<input style="height: 50px; width: 100px; font-size: 30px; font-weight: bold" type="text" class="form-control" name="importe" id="importe' + CONTADOR + '" disabled></td><td>' +
+        '<input type="hidden" name="_token" value="{{csrf_token()}}" id="token">'+
         '<button style="font-size: 1.75rem" class="btn btn-danger" id="btnEliminar' + CONTADOR + '" onclick="eliminar(this, productos);">Eliminar</button></td></tr>');
     //Aqui ya se pone el valor en el cuadro Grande
     $("#clave" + CONTADOR).val($("#clave0").val());
@@ -659,15 +660,16 @@ function verificacionDeProductos(jsonProductos) {
 
 function verificadorExistencias() {
     return $.ajax({
-        type: "POST",
-        //data: JSON.stringify(request),
-        contentType: "application/json",
-        url: "/postVentaActualizada",
-        success: function (data) {
-        },
-        error: function (e) {
-        }
+        url: 'http://127.0.0.1:8000/venta',
+        type: 'POST',
+        headers:{'X-CSRF-TOKEN': token},
+        dataType: 'json',
+        //data: {datos: clave},
     })
+        .done(function() {
+            console.log("success");
+            console.log("llegando perras");
+        })
 }
 /**
  * Funcion que que verifica si en el arreglo que viene del ajax que se llama notificacion tre faltantes

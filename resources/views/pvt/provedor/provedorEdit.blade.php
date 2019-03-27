@@ -15,37 +15,37 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Nombre</label>
-                                <input type="text" name="nombre" value="{{$provedor->nombre}}" class="form-control">
+                                <input type="text" name="nombre" value="{{$provedor->nombre}}" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Razon Social</label>
-                                <input type="text" name="razon_social" value="{{$provedor->razon_social}}" class="form-control">
+                                <input type="text" name="razon_social" value="{{$provedor->razon_social}}" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">RFC</label>
-                                <input type="text" name="rfc" value="{{$provedor->rfc}}" class="form-control">
+                                <input type="text" name="rfc" value="{{$provedor->rfc}}" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Direccion</label>
-                                <input type="text" name="direccion" value="{{$provedor->direccion}}" class="form-control">
+                                <input type="text" name="direccion" value="{{$provedor->direccion}}" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Telefono</label>
-                                <input type="text" name="telefono" value="{{$provedor->telefono}}" class="form-control">
+                                <input type="text" name="telefono" value="{{$provedor->telefono}}" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Contacto</label>
-                                <input type="text" name="contacto" value="{{$provedor->contacto}}" class="form-control">
+                                <input type="text" name="contacto" value="{{$provedor->contacto}}" class="form-control" required>
                             </div>
                         </div>
                     </div>

@@ -8,7 +8,7 @@
                                     data-target="#productosModal">Productos
                             </button>
                         </div>-->
-                    <div class="col-md-2">
+                    <div class="col-md-2 col-md-offset-3">
                         <button id="cobro" onclick="btnCobro();" class="btn btn-primary">COBRO
                         </button>
                     </div>
@@ -28,9 +28,6 @@
                         </th>
                         <th>
                             <div>Cantidad</div>
-                        </th>
-                        <th>
-                            <div>Cantidad E.</div>
                         </th>
                         <th>
                             <div>Descripcion</div>
@@ -80,11 +77,17 @@
                         <td><input style="height: 50px; width: 100px; font-size: 30px; font-weight: bold"
                                    type="text" class="form-control" name="importe" id="importe0" disabled>
                         </td>
+                        <input type="hidden" name="_token" value="<?php echo e(csrf_token()); ?>" id="token">
                         <td>
-                            <button class="btn btn-primary" id="btnAgregar0" onclick="agregar();" disabled>
+                            <button class="btn btn-primary" id="btnAgregar0" onclick="enviar();">
                                 Agregar
                             </button>
                         </td>
+                        <!--<td>
+                            <button class="btn btn-primary" id="btnAgregar0" onclick="agregar();" disabled>
+                                Agregar
+                            </button>
+                        </td>-->
                     </tr>
                     </tbody>
                 </table>
@@ -100,15 +103,15 @@
 
                 </div>
             </div>
-            <div class="col-md-3 col-md-offset-9">
-                <label style="height: 80px; width: 100px; font-size: 30px; font-weight: bold"
-                       for="">Total:</label><input
-                        style="height: 80px; width: 200px; font-size: 50px; font-weight: bold" type="text"
-                        id="total" disabled>
-            </div>
+
 
         </div>
+        </div>
+    <div class="row">
+        <div class="col-md-3 col-md-offset-3">
+            <label style="height: 80px; width: 100px; font-size: 30px; font-weight: bold" for="">Total:</label>
+            <input style="height: 80px; width: 200px; font-size: 50px; font-weight: bold" type="text" id="total" disabled>
+        </div>
     </div>
-
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('pvt.layoutABC.layout', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

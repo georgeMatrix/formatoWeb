@@ -15,13 +15,13 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Nombre</label>
-                                <input name="nombre" value="{{$unidadMedida->nombre}}" type="text" class="form-control">
+                                <input name="nombre" value="{{$unidadMedida->nombre}}" type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="">Descripcion</label>
-                                <input name="descripcion" value="{{$unidadMedida->descripcion}}" type="text" class="form-control">
+                                <input name="descripcion" value="{{$unidadMedida->descripcion}}" type="text" class="form-control" required>
                             </div>
                         </div>
                     </div>

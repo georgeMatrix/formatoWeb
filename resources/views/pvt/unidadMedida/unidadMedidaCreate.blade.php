@@ -15,13 +15,13 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nombre</label>
-                                    <input type="text" class="form-control" name="nombre">
+                                    <input type="text" class="form-control" name="nombre" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Descripcion</label>
-                                    <input type="text" class="form-control" name="descripcion">
+                                    <input type="text" class="form-control" name="descripcion" required>
                                 </div>
                             </div>
                         </div>

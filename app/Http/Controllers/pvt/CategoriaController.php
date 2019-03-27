@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\pvt;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\CategoriaRequest;
+use App\Http\Requests\CategoriaRequestUpdate;
 use App\modelos\Categoria;
 use Illuminate\Http\Request;
 
@@ -35,12 +37,9 @@ class CategoriaController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(CategoriaRequest $request)
     {
-        $categoria = new Categoria();
-        $categoria->nombre = $request->nombre;
-        $categoria->descripcion = $request->descripcion;
-        $categoria->save();
+        Categoria::create($request->all());
         return redirect()->route('categoria.index');
     }
 
@@ -74,7 +73,7 @@ class CategoriaController extends Controller
      * @param  \App\Categoria  $categoria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(CategoriaRequestUpdate $request, $id)
     {
         $categoria = Categoria::find($id);
         $categoria->nombre = $request->nombre;

@@ -15,37 +15,37 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nombre</label>
-                                    <input type="text" name="nombre" class="form-control">
+                                    <input type="text" name="nombre" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Razon Social</label>
-                                    <input type="text" name="razon_social" class="form-control">
+                                    <input type="text" name="razon_social" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">RFC</label>
-                                    <input type="text" name="rfc" class="form-control">
+                                    <input type="text" name="rfc" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Direccion</label>
-                                    <input type="text" name="direccion" class="form-control">
+                                    <input type="text" name="direccion" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Telefono</label>
-                                    <input type="text" name="telefono" class="form-control">
+                                    <input type="text" name="telefono" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Contacto</label>
-                                    <input type="text" name="contacto" class="form-control">
+                                    <input type="text" name="contacto" class="form-control" required>
                                 </div>
                             </div>
                         </div>

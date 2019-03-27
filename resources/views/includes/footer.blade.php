@@ -29,7 +29,7 @@
                             </li>
                             <li>
                                 <div class="contact-list phone">
-                                    <span>Telefono: 55 58 78 42 37</span>
+                                    <span>Whatsapp: 55 25 03 76 61</span>
                                 </div>
                             </li>
                             <li>

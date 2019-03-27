@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\pvt;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProductoRequest;
 use App\modelos\Categoria;
 use App\modelos\Producto;
 use App\modelos\Provedor;
@@ -44,7 +45,7 @@ class ProductoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ProductoRequest $request)
     {
         $producto = new Producto();
         $producto->clave = $request->clave;
@@ -109,7 +110,7 @@ class ProductoController extends Controller
      * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ProductoRequest $request, $id)
     {
         $producto = Producto::find($id);
         $producto->clave = $request->clave;

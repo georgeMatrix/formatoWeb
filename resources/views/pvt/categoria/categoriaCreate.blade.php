@@ -8,19 +8,20 @@
                     <p class="card-category">Completa los campos</p>
                 </div>
                 <div class="card-body">
+                    @include('pvt.fragments.error')
                     <form action="{{route('categoria.store')}}" method="post">
                         {{csrf_field()}}
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Nombre</label>
-                                    <input type="text" name="nombre" class="form-control">
+                                    <input type="text" name="nombre" class="form-control" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="">Descripcion</label>
-                                    <input type="text" name="descripcion" class="form-control">
+                                    <input type="text" name="descripcion" class="form-control" required>
                                 </div>
                             </div>
                         </div>
